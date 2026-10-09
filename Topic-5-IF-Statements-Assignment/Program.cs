@@ -29,18 +29,26 @@ namespace Topic_5_IF_Statements_Assignment
         }
         public static void SpaceBoxing()
         {
-            bool planets;
+            bool done;
             double weight;
             int planet;
 
-            planets = false;
+            done = false;
 
             Console.WriteLine("Welcome To Space Boxing, Earthling!");
             Console.WriteLine("(Press Enter To Continue)");
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Please Input Your Earth Weight:");
-            Double.TryParse(Console.ReadLine(), out weight);
+            
+            
+            while(!Double.TryParse(Console.ReadLine(), out weight) || weight < 0)
+            {
+                Console.WriteLine("Invalid weight, try again");
+            }
+
+
+
             Console.Clear();
             Console.Write("Your Earth Weight Is " + weight);
             Console.WriteLine("lbs");
@@ -53,7 +61,7 @@ namespace Topic_5_IF_Statements_Assignment
             //Console.WriteLine("6 - Neptune");
             //planet = Convert.ToInt32(Console.ReadLine());
             //Console.Clear();
-            while (!planets) 
+            while (!done) 
             {
                 Console.WriteLine("Choose Which Planet You Would Like To Fight On:");
                 Console.WriteLine("1 - Venus");
@@ -62,7 +70,11 @@ namespace Topic_5_IF_Statements_Assignment
                 Console.WriteLine("4 - Saturn");
                 Console.WriteLine("5 - Uranus");
                 Console.WriteLine("6 - Neptune");
+                Console.WriteLine("7 - Quit");
+
                 planet = Convert.ToInt32(Console.ReadLine());
+                
+                
                 Console.Clear();
                 if (planet == 1)
                 {
@@ -113,15 +125,18 @@ namespace Topic_5_IF_Statements_Assignment
                     Console.WriteLine(" on Neptune.");
                     Console.WriteLine("Not too shabby.");
                 }
-                else if (planet >= 7)
+                else if (planet == 7)
+                    done = true;
+                else
                 {
-                    Console.WriteLine("You Have Selected An Invalid Planet.");
-                    Console.WriteLine("Please Select an Actual Planet.");
-
-                    planets = false;
+                    Console.WriteLine("Invalid planet, press ENTER to continue");
+                    Console.ReadLine();
 
                 }
+
             }
+
+
             //if (planet == 1)
             //{
             //    Console.WriteLine("You have selected Venus.");
