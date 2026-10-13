@@ -35,7 +35,7 @@ namespace Topic_5_IF_Statements_Assignment
 
             done = false;
 
-            Console.WriteLine("Welcome To Space Boxing, Earthling!");
+            Console.WriteLine("-Welcome To Space Boxing, Earthling!-");
             Console.WriteLine("(Press Enter To Continue)");
             Console.ReadLine();
             Console.Clear();
@@ -201,7 +201,35 @@ namespace Topic_5_IF_Statements_Assignment
         }
         public static void MiniQuiz()
         {
-            Console.WriteLine("Welcome To The Mini Quiz");
+            int score = 0;
+            int answer;
+            Console.WriteLine("-Welcome To The Mini Quiz-");
+            Console.WriteLine();
+            Console.WriteLine("These questions will be on the topic of Star Wars.");
+            Console.WriteLine();
+            Console.WriteLine("Press Enter to Continue:");
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("1st Question: When did the first Star Wars movie 'A New Hope' release?");
+            Console.WriteLine();
+            Console.WriteLine("1.1967");
+            Console.WriteLine("2.1977");
+            Console.WriteLine("3.1973");
+            Console.WriteLine("4.1980");
+            //Console.WriteLine("Please input the number of the response as your answer.");
+            //score = Convert.ToInt32(Console.ReadLine());
+            answer = Convert.ToInt32(Console.ReadLine());
+            if (answer == 2)
+            {
+                Console.Write(score + 1);
+                Console.WriteLine();
+                Console.WriteLine("Correct!");
+            }
+            else 
+            {
+                Console.WriteLine();
+                Console.WriteLine("Incorrect.");
+            }
         }
     }
 }
