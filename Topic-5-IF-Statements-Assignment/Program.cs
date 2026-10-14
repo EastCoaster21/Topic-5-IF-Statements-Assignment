@@ -203,6 +203,7 @@ namespace Topic_5_IF_Statements_Assignment
         {
             int score = 0;
             int answer;
+            string textAnswer;
             Console.WriteLine("-Welcome To The Mini Quiz-");
             Console.WriteLine();
             Console.WriteLine("These questions will be on the topic of Star Wars.");
@@ -210,7 +211,7 @@ namespace Topic_5_IF_Statements_Assignment
             Console.WriteLine("Press Enter to Continue:");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("1st Question: When did the first Star Wars movie 'A New Hope' release?");
+            Console.WriteLine("Question #1: When did the first Star Wars movie 'A New Hope' release?");
             Console.WriteLine();
             Console.WriteLine("1.1967");
             Console.WriteLine("2.1977");
@@ -219,17 +220,70 @@ namespace Topic_5_IF_Statements_Assignment
             //Console.WriteLine("Please input the number of the response as your answer.");
             //score = Convert.ToInt32(Console.ReadLine());
             answer = Convert.ToInt32(Console.ReadLine());
-            if (answer == 2)
+            if (answer == 1977 || answer == 2)
             {
-                Console.Write(score + 1);
+                score++;
                 Console.WriteLine();
                 Console.WriteLine("Correct!");
             }
             else 
             {
                 Console.WriteLine();
-                Console.WriteLine("Incorrect.");
+                Console.WriteLine("Not Quite. Good Try though.");
             }
+            Console.WriteLine("Press Enter to continue:");
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Question #2: What is the name of Boba Fett's ship?");
+            Console.WriteLine("The Millenium Falcon");
+            Console.WriteLine("X-Wing");
+            Console.WriteLine("The Slave 1");
+            Console.WriteLine("Tie Fighter");
+            textAnswer = Console.ReadLine();
+            if (textAnswer.ToUpper() == "THE SLAVE 1" || textAnswer.ToUpper() == "SLAVE 1" || textAnswer.ToUpper() == "SLAVE1")  
+            {
+                score++;
+                Console.WriteLine();
+                Console.WriteLine("Correct! I'm Impressed.");
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("Incorrect. Maybe you'll get the next one?");
+            }
+            Console.WriteLine("Press Enter to continue:");
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Question #3: Who is the creator of the Star Wars Franchise?");
+            if (textAnswer.ToUpper() == "GEORGE LUCAS" || textAnswer.ToUpper() == "GEORGELUCAS")
+            {
+                score++;
+                Console.WriteLine();
+                Console.WriteLine("Correct, but that was an easy one.");
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("How did you mess that one up?");
+            }
+            Console.WriteLine("Press Enter to continue:");
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Question #4:");
+            //if (textAnswer.ToUpper() == "GEORGE LUCAS" || textAnswer.ToUpper() == "GEORGELUCAS")
+            //{
+            //    score++;
+            //    Console.WriteLine();
+            //    Console.WriteLine("Correct, but that was an easy one.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine();
+            //    Console.WriteLine("How did you mess that one up?");
+            //}
+            //Console.WriteLine("Press Enter to continue:");
+            //Console.ReadLine();
+            //Console.Clear();
         }
     }
 }
