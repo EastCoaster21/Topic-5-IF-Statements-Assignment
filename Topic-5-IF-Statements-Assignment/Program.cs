@@ -40,9 +40,9 @@ namespace Topic_5_IF_Statements_Assignment
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Please Input Your Earth Weight:");
-            
-            
-            while(!Double.TryParse(Console.ReadLine(), out weight) || weight < 0)
+
+
+            while (!Double.TryParse(Console.ReadLine(), out weight) || weight < 0)
             {
                 Console.WriteLine("Invalid weight, try again");
             }
@@ -61,7 +61,7 @@ namespace Topic_5_IF_Statements_Assignment
             //Console.WriteLine("6 - Neptune");
             //planet = Convert.ToInt32(Console.ReadLine());
             //Console.Clear();
-            while (!done) 
+            while (!done)
             {
                 Console.WriteLine("Choose Which Planet You Would Like To Fight On:");
                 Console.WriteLine("1 - Venus");
@@ -73,8 +73,8 @@ namespace Topic_5_IF_Statements_Assignment
                 Console.WriteLine("7 - Quit");
 
                 planet = Convert.ToInt32(Console.ReadLine());
-                
-                
+
+
                 Console.Clear();
                 if (planet == 1)
                 {
@@ -224,9 +224,9 @@ namespace Topic_5_IF_Statements_Assignment
             {
                 score++;
                 Console.WriteLine();
-                Console.WriteLine("Correct!");
+                Console.WriteLine("Correct! I'm surprised you knew that one.");
             }
-            else 
+            else
             {
                 Console.WriteLine();
                 Console.WriteLine("Not Quite. Good Try though.");
@@ -240,7 +240,7 @@ namespace Topic_5_IF_Statements_Assignment
             Console.WriteLine("The Slave 1");
             Console.WriteLine("Tie Fighter");
             textAnswer = Console.ReadLine();
-            if (textAnswer.ToUpper() == "THE SLAVE 1" || textAnswer.ToUpper() == "SLAVE 1" || textAnswer.ToUpper() == "SLAVE1")  
+            if (textAnswer.ToUpper() == "THE SLAVE 1" || textAnswer.ToUpper() == "SLAVE 1" || textAnswer.ToUpper() == "SLAVE1" || textAnswer.ToUpper() == "THESLAVE1")
             {
                 score++;
                 Console.WriteLine();
@@ -255,6 +255,7 @@ namespace Topic_5_IF_Statements_Assignment
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Question #3: Who is the creator of the Star Wars Franchise?");
+            textAnswer = Console.ReadLine();
             if (textAnswer.ToUpper() == "GEORGE LUCAS" || textAnswer.ToUpper() == "GEORGELUCAS")
             {
                 score++;
@@ -269,21 +270,38 @@ namespace Topic_5_IF_Statements_Assignment
             Console.WriteLine("Press Enter to continue:");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Question #4:");
-            //if (textAnswer.ToUpper() == "GEORGE LUCAS" || textAnswer.ToUpper() == "GEORGELUCAS")
-            //{
-            //    score++;
-            //    Console.WriteLine();
-            //    Console.WriteLine("Correct, but that was an easy one.");
-            //}
-            //else
-            //{
-            //    Console.WriteLine();
-            //    Console.WriteLine("How did you mess that one up?");
-            //}
-            //Console.WriteLine("Press Enter to continue:");
-            //Console.ReadLine();
-            //Console.Clear();
-        }
-    }
+            Console.WriteLine("Question #4: True or False:");
+            Console.WriteLine("There are 8 Star Wars Films in the Skywalker Saga. (Mainline Films)");
+            textAnswer = Console.ReadLine();
+            if (textAnswer.ToUpper() == "FALSE" || textAnswer.ToUpper() == "F")
+            {
+                score++;
+                Console.WriteLine();
+                Console.WriteLine("Correct, Good Job.");
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("Yikes.");
+            }
+            Console.WriteLine("Press Enter to continue:");
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.Write("Congratulations on completing the quiz! Your final score is " + score);
+            Console.WriteLine("/4");
+            Console.Write("That's (INSERT PERCENTAGE)");
+            if (score == 0 || score == 1)
+            {
+                Console.WriteLine("Maybe brush up on your Star Wars knowledge.");
+            }
+            else if (score == 2 || score == 3)
+            {
+                Console.WriteLine("You did good. May the force be with you.");
+            }
+            else if (score ==4);
+                    { 
+                Console.WriteLine("You are a true Jedi. Congratulations.");
+            }
+        }           }
 }
