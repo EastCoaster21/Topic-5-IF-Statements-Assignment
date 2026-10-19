@@ -201,7 +201,7 @@ namespace Topic_5_IF_Statements_Assignment
         }
         public static void MiniQuiz()
         {
-            int score = 0;
+            double score = 0;
             int answer;
             string textAnswer;
             Console.WriteLine("-Welcome To The Mini Quiz-");
@@ -290,18 +290,19 @@ namespace Topic_5_IF_Statements_Assignment
 
             Console.Write("Congratulations on completing the quiz! Your final score is " + score);
             Console.WriteLine("/4");
-            Console.Write("That's (INSERT PERCENTAGE)");
+            Console.Write("That's " + (Math.Round(score/4 * 100, 2)));
+            Console.Write("%,");
             if (score == 0 || score == 1)
             {
-                Console.WriteLine("Maybe brush up on your Star Wars knowledge.");
+                Console.WriteLine(" Maybe brush up on your Star Wars knowledge.");
             }
             else if (score == 2 || score == 3)
             {
-                Console.WriteLine("You did good. May the force be with you.");
+                Console.WriteLine(" You did good. May the force be with you.");
             }
-            else if (score ==4);
-                    { 
-                Console.WriteLine("You are a true Jedi. Congratulations.");
+            else if (score == 4)
+            { 
+                Console.WriteLine(" You are a true Jedi. Congratulations.");
             }
         }           }
 }
