@@ -206,7 +206,68 @@ namespace Topic_5_IF_Statements_Assignment
         }
         public static void Calculator()
         {
-            Console.WriteLine("Welcome To The Calculator");
+            Console.WriteLine("Welcome To The Simple Calculator. Dont expect much from him. (He's still learning.)");
+            Console.WriteLine("ENTER");
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Hey i'm Connor the calculator, nice to meet ya.");
+            Console.WriteLine();
+            Console.WriteLine("Insert your math needs. EX.(+, -, *, /, ^, sqrt):");
+            string op = Console.ReadLine();
+            double num1, num2, answer = 0;
+            if (op == "sqrt")
+            {
+                Console.WriteLine("Enter a VALID number to be sqrt'd:");
+                num1 = Convert.ToDouble(Console.ReadLine());
+
+                if (num1 < 0)
+                {
+                    Console.WriteLine("Square roots of negatives dont exist dude.");
+                }
+                else
+                {
+                    answer = Math.Sqrt(num1);
+                    Console.WriteLine("sqrt(" + num1 + ") = " + answer);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Input your first digit:");
+                num1 = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Please input second digit:");
+                num2 = Convert.ToDouble(Console.ReadLine());
+                if (op == "+")
+                {
+                    answer = num1 + num2;
+                }
+                else if (op == "-")
+                {
+                    answer = num1 - num2;
+                }
+                else if (op == "*")
+                {
+                    answer = num1 * num2;
+                }
+                else if (op == "/")
+                {
+                    if (num2 == 0)
+                    {
+                        Console.WriteLine("Can't divide by zero my man.");
+                        return;
+                    }
+                    answer = num1 / num2;
+                }
+                else if (op == "^")
+                {
+                    answer = Math.Pow(num1, num2);
+                }
+                else
+                {
+                    Console.WriteLine("Yeah so looking back, that was NOT an operator. What am I meant to do with that?");
+                    return;
+                }
+                Console.WriteLine(num1 + " " + op + " " + num2 + " = " + answer);
+            }
         }
         public static void MiniQuiz()
         {
